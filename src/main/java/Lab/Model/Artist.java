@@ -30,6 +30,7 @@ public class Artist {
      * They will be connected via a foreign key by the name "album_fk", belonging to the Album table.
      * Spring will automatically perform the logic needed to join the Album and Artist table to get related albums.
      */
+   
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "artist_fk")
     private List<Album> albums;
